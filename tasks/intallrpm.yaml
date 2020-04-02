@@ -1,0 +1,4 @@
+- name: install lnav
+  yum:
+    name: "lnav"
+    state: present
