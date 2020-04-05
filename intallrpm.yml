@@ -1,0 +1,8 @@
+---
+- name: lol666
+  hosts: all
+  tasks:
+      - name: install lnav
+        yum:
+          name: "lnav"
+          state: present
