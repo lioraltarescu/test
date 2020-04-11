@@ -10,4 +10,4 @@
 
 - fail:
     msg: the cluster is not green BOOM!!! (mic drop)
-  when: _result.json.status == "green"
+  when: _result.json.status != "green"
