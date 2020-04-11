@@ -1,0 +1,14 @@
+---
+- name: check if elastic is running
+  shell:  ps -ef | grep elastic | wc -l 
+  register: elastic_status
+
+- name: install elastic on new server
+  block:
+    - include_tasks: create_elastic_user.yml
+    - include_tasks: install_elastic_rpm.yml
+    - include_tasks: create_config_files.yml
+    - include_tasks: validate_clister.yml
+  when: elastic_status.stdout|int  == 2 and ansible_distribution == 'CentOS' 
+  
+

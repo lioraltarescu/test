@@ -1,0 +1,22 @@
+---
+- name: install elastic repo
+  yum_repository:
+      name: Elasticsearch-7
+      description: Elasticsearch repository for 7.x packages
+      file: elasticsearch
+      enabled: yes
+      baseurl: "https://artifacts.elastic.co/packages/7.x/yum"
+      gpgkey: "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
+      gpgcheck: no
+
+- name: install elastic rpm
+  yum:
+    name: 
+        - "elasticsearch-{{ elastic_version }}"
+    state: present
+
+- name: install java rpm
+  yum:
+    name:
+        - java-11-openjdk-devel
+    state: present

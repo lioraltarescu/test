@@ -1,0 +1,14 @@
+---
+- name: create elasticsearch group
+  group:
+    name: elasticsearch
+    gid: 114
+    state: present
+
+- name: creating elasticsearch user
+  user:
+    name: elasticsearch
+    shell: /bin/false
+    group: elasticsearch
+    uid: 111
+    state: present

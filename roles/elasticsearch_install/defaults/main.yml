@@ -1,0 +1,22 @@
+---
+# defaults file for elasticsearch_install
+elastic_version: '7.6.2'
+elasticsearch_service_name: elasticsearch.service
+
+#elasticsearch.yml config 
+discovery_zen_minimum_master_nodes: 2
+node_max_local_storage_nodes: 1
+indices_breaker_fielddata_limit : '10%'
+indices_fielddata_cache_size : '10%'
+indices_queries_cache_size : '40%'
+indices_requests_cache_size : '2%'
+node_data : true
+node_ingest : true
+node_master : true
+cluster_name : 'lior_42'
+gateway_recover_after_nodes: 3
+gateway_expected_data_nodes: 3
+
+
+# jvm.option config 
+ES_HEAP_SIZE: '2g'

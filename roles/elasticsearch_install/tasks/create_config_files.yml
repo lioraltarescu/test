@@ -1,0 +1,31 @@
+---
+- name: Copy elasticsearch.yml
+  template:
+    src: elaticsearch.yml.j2
+    dest: /etc/elasticsearch/elasticsearch.yml
+    owner: root
+    group: elasticsearch
+    mode: '660'
+    backup: yes
+
+- name: Copy jvm.option
+  template:
+    src: jvm.options.j2
+    dest: /etc/elasticsearch/jvm.options
+    owner: root
+    group: elasticsearch
+    mode: '660'
+    backup: yes
+
+- name: Update elaticsearch service file
+  lineinfile:
+    path: /usr/lib/systemd/system/elasticsearch.service
+    insertafter: 'LimitNOFILE*'
+    line: 'LimitMEMLOCK=infinity'
+    state: present
+  
+- name: Restart Elasticsearch service
+  systemd:
+    state: restarted
+    name: elasticsearch
+    daemon_reload: yes

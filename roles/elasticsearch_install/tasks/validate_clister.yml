@@ -1,0 +1,13 @@
+---
+- name: get cluster health
+  uri:
+    url: "http://{{inventory_hostname}}:9200/_cluster/health?pretty&pretty"
+    method: GET
+  register: _result
+  until: _result.json.status == "green"
+  retries: 3
+  delay: 5 
+
+- fail:
+    msg: the cluster is not green BOOM!!! (mic drop)
+  when: _result.json.status == "green"
