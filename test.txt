@@ -1,15 +1,15 @@
-default["db"]["com.wixpress.xxx.xxxxxxxxx"]["001"]["rw"]["db_host"] = "pdb-mysql-test0a.42.wixprod.net"
-default["db"]["com.wixpress.xxx.xxxxxxxxx"]["001"]["ro"]["db_host"] = "pdb-mysql-test0a.42.wixprod.net"
+default["db"]["com.wixpress.xxx.xxxxxxxxx"]["001"]["rw"]["db_host"] = "pdb-mysql-test1b.42.wixprod.net"
+default["db"]["com.wixpress.xxx.xxxxxxxxx"]["001"]["ro"]["db_host"] = "pdb-mysql-test1b.42.wixprod.net"
 default["db"]["com.wixpress.xxx.xxxxxxxxx"]["999"]["rw"]["db_host"] = "pdb-mysql-test0a.96.wixprod.net"
 default["db"]["com.wixpress.xxx.xxxxxxxxx"]["999"]["ro"]["db_host"] = "pdb-mysql-test0a.96.wixprod.net"
 
 default["db"]["com.wixpress.yyy.yyyyyyyyy"]["999"]["rw"]["db_host"] = "pdb-mysql-test0a.96.wixprod.net"
 default["db"]["com.wixpress.yyy.yyyyyyyyy"]["999"]["ro"]["db_host"] = "pdb-mysql-test0a.96.wixprod.net"
-default["db"]["com.wixpress.yyy.yyyyyyyyy"]["001"]["rw"]["db_host"] = "pdb-mysql-test0a.42.wixprod.net"
-default["db"]["com.wixpress.yyy.yyyyyyyyy"]["001"]["ro"]["db_host"] = "pdb-mysql-test0a.42.wixprod.net"
+default["db"]["com.wixpress.yyy.yyyyyyyyy"]["001"]["rw"]["db_host"] = "pdb-mysql-test1b.42.wixprod.net"
+default["db"]["com.wixpress.yyy.yyyyyyyyy"]["001"]["ro"]["db_host"] = "pdb-mysql-test1b.42.wixprod.net"
 
-default["db"]["com.wixpress.zzzz.zzzzzzz"]["001"]["rw"]["db_host"] = "pdb-mysql-test0a.42.wixprod.net"
-default["db"]["com.wixpress.zzzz.zzzzzzz"]["001"]["ro"]["db_host"] = "pdb-mysql-test0a.42.wixprod.net"
+default["db"]["com.wixpress.zzzz.zzzzzzz"]["001"]["rw"]["db_host"] = "pdb-mysql-test1b.42.wixprod.net"
+default["db"]["com.wixpress.zzzz.zzzzzzz"]["001"]["ro"]["db_host"] = "pdb-mysql-test1b.42.wixprod.net"
 default["db"]["com.wixpress.zzzz.zzzzzzz"]["999"]["rw"]["db_host"] = "pdb-mysql-test0a.96.wixprod.net"
 default["db"]["com.wixpress.zzzz.zzzzzzz"]["999"]["ro"]["db_host"] = "pdb-mysql-test0a.96.wixprod.net"
 
